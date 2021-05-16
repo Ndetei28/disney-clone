@@ -14,7 +14,7 @@ import { selectUserName } from "../features/user/userSlice";
 const Home = (props) => {
   const dispatch = useDispatch();
   const userName = useSelector(selectUserName);
-  let recommend = [];
+  let recommends = [];
   let newDisneys = [];
   let originals = [];
   let trending = [];
@@ -23,10 +23,10 @@ const Home = (props) => {
     console.log("hello");
     db.collection("movies").onSnapshot((snapshot) => {
       snapshot.docs.map((doc) => {
-        console.log(recommend);
+        console.log(recommends);
         switch (doc.data().type) {
           case "recommend":
-            recommend = [...recommend, { id: doc.id, ...doc.data() }];
+            recommends = [...recommends, { id: doc.id, ...doc.data() }];
             break;
 
           case "new":
@@ -45,7 +45,7 @@ const Home = (props) => {
 
       dispatch(
         setMovies({
-          recommend: recommend,
+          recommend: recommends,
           newDisney: newDisneys,
           original: originals,
           trending: trending,

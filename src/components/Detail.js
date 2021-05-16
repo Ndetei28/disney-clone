@@ -15,7 +15,7 @@ const Detail = (props) => {
         if (doc.exists) {
           setDetailData(doc.data());
         } else {
-          console.log("no such document in firebase 🔥");
+          console.log("No such document in firebase 🔥");
         }
       })
       .catch((error) => {
@@ -201,7 +201,7 @@ const GroupWatch = styled.div`
 
 const SubTitle = styled.div`
   color: rgb(249, 249, 249);
-  font-size: 15px;
+  font-size: 14px;
   min-height: 20px;
   @media (max-width: 768px) {
     font-size: 12px;
