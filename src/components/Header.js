@@ -81,7 +81,7 @@ const Header = (props) => {
             </a>
             <a>
               <img src="/images/original-icon.svg" alt="ORIGINALS" />
-              <span>ORIGINALS</span>
+              <span>ORIGINAL</span>
             </a>
             <a>
               <img src="/images/movie-icon.svg" alt="MOVIES" />
@@ -186,9 +186,9 @@ const NavMenu = styled.div`
       }
     }
   }
-  @media (max-width: 768px) {
+  /* @media (max-width: 768px) {
     display: none;
-  }
+  } */
 `;
 
 const Login = styled.a`
